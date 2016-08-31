@@ -1,4 +1,5 @@
 <?php
+
 use Monolog\Logger;
 use Monolog\Handler\ErrorLogHandler;
 use Monolog\Processor\WebProcessor;

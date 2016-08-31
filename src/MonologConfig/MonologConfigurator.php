@@ -1,4 +1,5 @@
 <?php
+
 namespace Gummibeer\MonologConfig;
 
 use Gelf\Publisher;
@@ -60,7 +61,7 @@ class MonologConfigurator
 
     protected function pushHandler($handler, array $config)
     {
-        $method = $method = 'get' . Str::studly($handler) . 'Handler';
+        $method = $method = 'get'.Str::studly($handler).'Handler';
         if (method_exists($this, $method)) {
             try {
                 $handler = $this->$method($config);
@@ -73,6 +74,7 @@ class MonologConfigurator
                         }
                     }
                 }
+
                 return true;
             } catch (\Exception $e) {
                 return false;
@@ -88,6 +90,7 @@ class MonologConfigurator
             $transport = new UdpTransport($config['host'], $config['port']);
         }
         $publisher = new Publisher($transport);
+
         return new GelfHandler($publisher, $config['level']);
     }
 
@@ -123,8 +126,9 @@ class MonologConfigurator
 
     protected function getMongoDbHandler(array $config)
     {
-        $connection = 'mongodb://' . $config['host'] . ':' . $config['port'];
+        $connection = 'mongodb://'.$config['host'].':'.$config['port'];
         $mongodb = new \Mongo($connection);
+
         return new MongoDBHandler($mongodb, $config['database'], $config['collection'], $config['level']);
     }
 
