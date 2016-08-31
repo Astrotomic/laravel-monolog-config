@@ -2,7 +2,9 @@
 
 namespace Gummibeer\MonologConfig;
 
-class MonologConfigServiceProvider
+use Illuminate\Support\ServiceProvider;
+
+class MonologConfigServiceProvider extends ServiceProvider
 {
     public function boot()
     {
