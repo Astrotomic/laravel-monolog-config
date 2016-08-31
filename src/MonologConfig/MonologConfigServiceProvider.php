@@ -6,6 +6,11 @@ use Illuminate\Support\ServiceProvider;
 
 class MonologConfigServiceProvider extends ServiceProvider
 {
+    public function register()
+    {
+        // 
+    }
+
     public function boot()
     {
         $this->config();
