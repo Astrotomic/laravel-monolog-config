@@ -28,7 +28,7 @@ class MonologConfigurator
     public function __construct(Logger $monolog)
     {
         $this->monolog = $monolog;
-        $this->config = config('log');
+        $this->config = config('monolog');
     }
 
     public function run()
