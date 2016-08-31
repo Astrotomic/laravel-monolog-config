@@ -16,7 +16,7 @@ return [
         'gelf' => [
             'enabled' => false,
             'driver' => 'gelf',
-            'host' => 'graylog.absolute.local',
+            'host' => 'localhost',
             'transport' => 'udp',
             'port' => 12201,
             'level' => Logger::DEBUG,
