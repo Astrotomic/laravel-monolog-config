@@ -1,6 +1,6 @@
 <?php
-namespace Gummibeer\MonologConfig;
 
+namespace Gummibeer\MonologConfig;
 
 class MonologConfigServiceProvider
 {
