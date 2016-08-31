@@ -1,0 +1,27 @@
+{
+  "name": "gummibeer/laravel-monolog-config",
+  "description": "Simple Configuration Package for Monolog in Laravel.",
+  "keywords": ["monolog", "log", "config", "laravel"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tom Witkowski",
+      "email": "dev.gummibeer@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "illuminate/support": "~5.0",
+    "monolog/monolog": "^1.21"
+  },
+  "require-dev": {
+    "laravel/framework": "~5.0",
+    "graylog2/gelf-php": "~1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gummibeer\\MonologConfig\\": "src/MonologConfig"
+    }
+  }
+}
