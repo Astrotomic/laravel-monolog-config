@@ -1,9 +1,9 @@
 # Monolog Configurator - Laravel 5
 
-[![GitHub release](https://img.shields.io/github/release/fenos/Notifynder.svg?style=flat-square)](https://github.com/fenos/Notifynder/releases)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/fenos/Notifynder/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/fenos/Notifynder.svg?style=flat-square)](https://github.com/fenos/Notifynder/issues)
-[![StyleCI](https://styleci.io/repos/18425539/shield)](https://styleci.io/repos/18425539)
+[![GitHub release](https://img.shields.io/github/release/Gummibeer/laravel-monolog-config.svg?style=flat-square)](https://github.com/Gummibeer/laravel-monolog-config/releases)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Gummibeer/laravel-monolog-config/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Gummibeer/laravel-monolog-config.svg?style=flat-square)](https://github.com/Gummibeer/laravel-monolog-config/issues)
+[![StyleCI](https://styleci.io/repos/67026923/shield)](https://styleci.io/repos/67026923)
 
 This package provides a simple way to configure monolog in laravel.
 
