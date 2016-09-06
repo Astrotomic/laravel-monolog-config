@@ -171,6 +171,7 @@ class MonologConfigurator
             'host'   => $config['host'],
             'port'   => $config['port'],
         ]);
+
         return new RedisHandler($client, $config['key'], $config['level']);
     }
 
