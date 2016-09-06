@@ -10,14 +10,21 @@ use Monolog\Formatter\FormatterInterface;
 use Monolog\Handler\AbstractHandler;
 use Monolog\Handler\ErrorLogHandler;
 use Monolog\Handler\GelfHandler;
+use Monolog\Handler\HipChatHandler;
+use Monolog\Handler\IFTTTHandler;
+use Monolog\Handler\LogEntriesHandler;
 use Monolog\Handler\LogglyHandler;
 use Monolog\Handler\MandrillHandler;
 use Monolog\Handler\MongoDBHandler;
 use Monolog\Handler\NativeMailerHandler;
+use Monolog\Handler\NullHandler;
+use Monolog\Handler\RedisHandler;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogHandler;
+use Monolog\Handler\ZendMonitorHandler;
 use Monolog\Logger;
+use Predis\Client;
 
 class MonologConfigurator
 {
@@ -135,5 +142,40 @@ class MonologConfigurator
     protected function getNativeMailerHandler(array $config)
     {
         return new NativeMailerHandler($config['to'], $config['subject'], $config['from'], $config['level']);
+    }
+
+    protected function getNullHandler(array $config)
+    {
+        return new NullHandler($config['level']);
+    }
+
+    protected function getHipChatHandler(array $config)
+    {
+        return new HipChatHandler($config['token'], $config['room'], $config['name'], $config['notify'], $config['level'], true, true, $config['format'], $config['host'], $config['version']);
+    }
+
+    protected function getIftttHandler(array $config)
+    {
+        return new IFTTTHandler($config['event'], $config['secret_key'], $config['level']);
+    }
+
+    protected function getLogEntriesHandler(array $config)
+    {
+        return new LogEntriesHandler($config['token'], true, $config['level']);
+    }
+
+    protected function getRedisHandler(array $config)
+    {
+        $client = new Client([
+            'scheme' => $config['scheme'],
+            'host'   => $config['host'],
+            'port'   => $config['port'],
+        ]);
+        return new RedisHandler($client, $config['key'], $config['level']);
+    }
+
+    protected function getZendMonitorHandler(array $config)
+    {
+        return new ZendMonitorHandler($config['level']);
     }
 }

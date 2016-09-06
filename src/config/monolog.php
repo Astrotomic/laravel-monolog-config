@@ -2,6 +2,7 @@
 
 use Monolog\Logger;
 use Monolog\Handler\ErrorLogHandler;
+use Monolog\Handler\HipChatHandler;
 use Monolog\Processor\WebProcessor;
 use Monolog\Formatter\LineFormatter;
 
@@ -75,6 +76,50 @@ return [
             'to' => null,
             'subject' => 'Laravel Log',
             'from' => null,
+            'level' => Logger::DEBUG,
+        ],
+        'devnull' => [
+            'enabled' => false,
+            'driver' => 'null',
+            'level' => Logger::DEBUG,
+        ],
+        'hipchat' => [
+            'enabled' => false,
+            'driver' => 'hip_chat',
+            'token' => null,
+            'room' => null,
+            'name' => 'Laravel Log',
+            'notify' => true,
+            'format' => 'text',
+            'host' => 'api.hipchat.com',
+            'version' => HipChatHandler::API_V1,
+            'level' => Logger::DEBUG,
+        ],
+        'ifttt' => [
+            'enabled' => false,
+            'driver' => 'ifttt',
+            'event' => null,
+            'secret_key' => null,
+            'level' => Logger::DEBUG,
+        ],
+        'logentries' => [
+            'enabled' => false,
+            'driver' => 'log_entries',
+            'token' => null,
+            'level' => Logger::DEBUG,
+        ],
+        'redis' => [
+            'enabled' => false,
+            'driver' => 'redis',
+            'scheme' => 'tcp',
+            'host' => 'localhost',
+            'port' => 6379,
+            'key' => null,
+            'level' => Logger::DEBUG,
+        ],
+        'zend' => [
+            'enabled' => false,
+            'driver' => 'zend_monitor',
             'level' => Logger::DEBUG,
         ],
     ],
