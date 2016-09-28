@@ -1,5 +1,5 @@
 {
-  "name": "gummibeer/laravel-monolog-config",
+  "name": "astrotomic/laravel-monolog-config",
   "description": "Simple Configuration Package for Monolog in Laravel.",
   "keywords": ["monolog", "log", "logging", "config", "laravel"],
   "type": "library",
