@@ -1,8 +1,8 @@
 # Monolog Configurator - Laravel 5
 
-[![GitHub release](https://img.shields.io/github/release/Gummibeer/laravel-monolog-config.svg?style=flat-square)](https://github.com/Gummibeer/laravel-monolog-config/releases)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Gummibeer/laravel-monolog-config/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/Gummibeer/laravel-monolog-config.svg?style=flat-square)](https://github.com/Gummibeer/laravel-monolog-config/issues)
+[![GitHub release](https://img.shields.io/github/release/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://github.com/Astrotomic/laravel-monolog-config/releases)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Astrotomic/laravel-monolog-config/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://github.com/Astrotomic/laravel-monolog-config/issues)
 [![StyleCI](https://styleci.io/repos/67026923/shield)](https://styleci.io/repos/67026923)
 
 This package provides a simple way to configure monolog in laravel.
@@ -16,7 +16,7 @@ This package provides a simple way to configure monolog in laravel.
 Add it on your `composer.json`
 
 ```
-"gummibeer/laravel-monolog-config": "^1.0"
+"astrotomic/laravel-monolog-config": "^1.0"
 ```
 
 and run
@@ -28,7 +28,7 @@ composer update
 or run
 
 ```
-composer require gummibeer/laravel-monolog-config
+composer require astrotomic/laravel-monolog-config
 ```
 
 ### Step 2
@@ -38,7 +38,7 @@ Add the following string to `config/app.php`
 **Providers array:**
 
 ```
-\Gummibeer\MonologConfig\MonologConfigServiceProvider::class,
+\Astrotomic\MonologConfig\MonologConfigServiceProvider::class,
 ```
 
 ### Step 3
@@ -46,7 +46,7 @@ Add the following string to `config/app.php`
 Publish the configuration for monolog with the following command:
 
 ```
-php artisan vendor:publish --provider="Gummibeer\MonologConfig\MonologConfigServiceProvider"
+php artisan vendor:publish --provider="Astrotomic\MonologConfig\MonologConfigServiceProvider"
 ```
 
 And adjust all the configurations to your needs.
@@ -63,7 +63,7 @@ Use it as your monolog configuration tool. Add this to your `bootstrap/app.php` 
 */
 
 $app->configureMonologUsing(function (Monolog\Logger $monolog) {
-    $configurator = new \Gummibeer\MonologConfig\MonologConfigurator($monolog);
+    $configurator = new \Astrotomic\MonologConfig\MonologConfigurator($monolog);
     $configurator->run();
 });
 ```

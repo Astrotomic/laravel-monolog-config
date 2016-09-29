@@ -1,6 +1,6 @@
 <?php
 
-namespace Gummibeer\MonologConfig;
+namespace Astrotomic\MonologConfig;
 
 use Gelf\Publisher;
 use Gelf\Transport\TcpTransport;
