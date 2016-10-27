@@ -91,10 +91,14 @@ class MonologConfigurator
 
     protected function getGelfHandler(array $config)
     {
-        if ($config['transport'] == 'tcp') {
-            $transport = new TcpTransport($config['host'], $config['port']);
-        } else {
-            $transport = new UdpTransport($config['host'], $config['port']);
+        switch (strtolower($config['transport'])) {
+            case 'tcp':
+                $transport = new TcpTransport($config['host'], $config['port']);
+                break;
+            default:
+            case 'udp':
+                $transport = new UdpTransport($config['host'], $config['port']);
+                break;
         }
         $publisher = new Publisher($transport);
 

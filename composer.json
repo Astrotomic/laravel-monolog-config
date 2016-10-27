@@ -17,16 +17,7 @@
     "monolog/monolog": "^1.21"
   },
   "require-dev": {
-    "laravel/framework": "~5.0",
-    "graylog2/gelf-php": "~1.0",
-    "sentry/sentry": "^0.13",
-    "ruflin/elastica": ">=0.90 <3.0",
-    "doctrine/couchdb": "~1.0@dev",
-    "aws/aws-sdk-php": "^2.4.9",
-    "php-amqplib/php-amqplib": "~2.4",
-    "swiftmailer/swiftmailer": "~5.3",
-    "php-console/php-console": "^3.1.3",
-    "predis/predis": "^1.1"
+    "laravel/framework": "~5.0"
   },
   "suggest": {
     "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
@@ -45,5 +36,13 @@
     "psr-4": {
       "Astrotomic\\MonologConfig\\": "src/MonologConfig"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "PhpGitHooks\\Infrastructure\\Composer\\ConfiguratorScript::buildConfig"
+    ],
+    "post-update-cmd": [
+      "PhpGitHooks\\Infrastructure\\Composer\\ConfiguratorScript::buildConfig"
+    ]
   }
 }
