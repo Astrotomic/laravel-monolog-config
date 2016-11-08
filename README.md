@@ -5,10 +5,9 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Astrotomic/laravel-monolog-config/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://github.com/Astrotomic/laravel-monolog-config/issues)
 
-[![Travis branch](https://img.shields.io/travis/Astrotomic/laravel-monolog-config/master.svg?style=flat-square)](https://travis-ci.org/Astrotomic/laravel-monolog-config/branches)
+
 [![StyleCI](https://styleci.io/repos/67026923/shield)](https://styleci.io/repos/67026923)
 [![Code Climate](https://img.shields.io/codeclimate/github/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://codeclimate.com/github/Astrotomic/laravel-monolog-config)
-[![Code Climate](https://img.shields.io/codeclimate/coverage/github/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://codeclimate.com/github/Astrotomic/laravel-monolog-config/coverage)
 [![Code Climate](https://img.shields.io/codeclimate/issues/github/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://codeclimate.com/github/Astrotomic/laravel-monolog-config/issues)
 
 This package provides a simple way to configure monolog in laravel.
