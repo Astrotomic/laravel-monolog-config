@@ -79,18 +79,26 @@ You can configure monolog after this your own in this method the normal [Laravel
 
 At the moment this class supports the following handlers, if you need any other one just create a PR or write an issue.
 
-* `\Monolog\Handler\ErrorLogHandler` - v1.0
-* `\Monolog\Handler\GelfHandler` - v1.0
-* `\Monolog\Handler\LogglyHandler` - v1.0
-* `\Monolog\Handler\MandrillHandler` - v1.0
-* `\Monolog\Handler\MongoDBHandler` - v1.0
-* `\Monolog\Handler\NativeMailerHandler` - v1.0
-* `\Monolog\Handler\RotatingFileHandler` - v1.0
-* `\Monolog\Handler\StreamHandler` - v1.0
-* `\Monolog\Handler\SyslogHandler` - v1.0
-* `\Monolog\Handler\HipChatHandler` - v1.1
-* `\Monolog\Handler\IFTTTHandler` - v1.1
-* `\Monolog\Handler\LogEntriesHandler` - v1.1
-* `\Monolog\Handler\NullHandler` - v1.1
-* `\Monolog\Handler\RedisHandler` - v1.1
-* `\Monolog\Handler\ZendMonitorHandler` - v1.1
+**v1.0.0**
+* `\Monolog\Handler\ErrorLogHandler`
+* `\Monolog\Handler\GelfHandler`
+* `\Monolog\Handler\LogglyHandler`
+* `\Monolog\Handler\MandrillHandler`
+* `\Monolog\Handler\MongoDBHandler`
+* `\Monolog\Handler\NativeMailerHandler`
+* `\Monolog\Handler\RotatingFileHandler`
+* `\Monolog\Handler\StreamHandler`
+* `\Monolog\Handler\SyslogHandler`
+
+**v1.1.0**
+* `\Monolog\Handler\HipChatHandler`
+* `\Monolog\Handler\IFTTTHandler`
+* `\Monolog\Handler\LogEntriesHandler`
+* `\Monolog\Handler\NullHandler`
+* `\Monolog\Handler\RedisHandler`
+* `\Monolog\Handler\ZendMonitorHandler`
+
+**v1.3.0**
+* `\Monolog\Handler\SlackHandler`
+* `\Monolog\Handler\SlackWebhookHandler`
+* `\Monolog\Handler\SlackbotHandler`
