@@ -1,10 +1,10 @@
 <?php
 
 use Monolog\Logger;
-use Monolog\Handler\ErrorLogHandler;
 use Monolog\Handler\HipChatHandler;
 use Monolog\Processor\WebProcessor;
 use Monolog\Formatter\LineFormatter;
+use Monolog\Handler\ErrorLogHandler;
 
 return [
     'fallback' => 'stream',

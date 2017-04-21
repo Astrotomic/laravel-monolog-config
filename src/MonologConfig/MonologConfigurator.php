@@ -2,32 +2,32 @@
 
 namespace Astrotomic\MonologConfig;
 
+use Predis\Client;
 use Gelf\Publisher;
+use Monolog\Logger;
+use Illuminate\Support\Str;
 use Gelf\Transport\TcpTransport;
 use Gelf\Transport\UdpTransport;
-use Illuminate\Support\Str;
-use Monolog\Formatter\FormatterInterface;
-use Monolog\Handler\AbstractHandler;
-use Monolog\Handler\ErrorLogHandler;
 use Monolog\Handler\GelfHandler;
-use Monolog\Handler\HipChatHandler;
-use Monolog\Handler\IFTTTHandler;
-use Monolog\Handler\LogEntriesHandler;
-use Monolog\Handler\LogglyHandler;
-use Monolog\Handler\MandrillHandler;
-use Monolog\Handler\MongoDBHandler;
-use Monolog\Handler\NativeMailerHandler;
 use Monolog\Handler\NullHandler;
+use Monolog\Handler\IFTTTHandler;
 use Monolog\Handler\RedisHandler;
-use Monolog\Handler\RotatingFileHandler;
-use Monolog\Handler\SlackbotHandler;
 use Monolog\Handler\SlackHandler;
-use Monolog\Handler\SlackWebhookHandler;
+use Monolog\Handler\LogglyHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogHandler;
+use Monolog\Handler\HipChatHandler;
+use Monolog\Handler\MongoDBHandler;
+use Monolog\Handler\AbstractHandler;
+use Monolog\Handler\ErrorLogHandler;
+use Monolog\Handler\MandrillHandler;
+use Monolog\Handler\SlackbotHandler;
+use Monolog\Handler\LogEntriesHandler;
 use Monolog\Handler\ZendMonitorHandler;
-use Monolog\Logger;
-use Predis\Client;
+use Monolog\Handler\NativeMailerHandler;
+use Monolog\Handler\RotatingFileHandler;
+use Monolog\Handler\SlackWebhookHandler;
+use Monolog\Formatter\FormatterInterface;
 
 class MonologConfigurator
 {
@@ -90,6 +90,7 @@ class MonologConfigurator
                 return false;
             }
         }
+
         return false;
     }
 
