@@ -2,7 +2,9 @@
 
 namespace Astrotomic\MonologConfig;
 
+use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Lumen\Application as LumenApplication;
 
 class MonologConfigServiceProvider extends ServiceProvider
 {
