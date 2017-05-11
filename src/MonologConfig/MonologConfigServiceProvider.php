@@ -18,10 +18,13 @@ class MonologConfigServiceProvider extends ServiceProvider
 
     protected function config()
     {
-        $this->publishes([
-            __DIR__.'/../config/monolog.php' => config_path('monolog.php'),
-        ]);
+        $source = realpath(__DIR__.'/../config/monolog.php');
+        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+            $this->publishes([$source => config_path('monolog.php')]);
+        } elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('monolog');
+        }
 
-        $this->mergeConfigFrom(__DIR__.'/../config/monolog.php', 'monolog');
+        $this->mergeConfigFrom($source, 'monolog');
     }
 }
