@@ -10,7 +10,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://codeclimate.com/github/Astrotomic/laravel-monolog-config)
 [![Code Climate](https://img.shields.io/codeclimate/issues/github/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://codeclimate.com/github/Astrotomic/laravel-monolog-config/issues)
 
-This package provides a simple way to configure monolog in laravel.
+This package provides a simple way to configure monolog in Laravel/Lumen.
 
 -----
 
