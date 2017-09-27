@@ -4,6 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/astrotomic/laravel-monolog-config.svg?style=flat-square)](https://github.com/Astrotomic/laravel-monolog-config/releases)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Astrotomic/laravel-monolog-config/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Astrotomic/laravel-monolog-config.svg?style=flat-square)](https://github.com/Astrotomic/laravel-monolog-config/issues)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAstrotomic%2Flaravel-monolog-config.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAstrotomic%2Flaravel-monolog-config?ref=badge_shield)
 
 
 [![StyleCI](https://styleci.io/repos/67026923/shield)](https://styleci.io/repos/67026923)
@@ -102,3 +103,7 @@ At the moment this class supports the following handlers, if you need any other 
 * `\Monolog\Handler\SlackHandler`
 * `\Monolog\Handler\SlackWebhookHandler`
 * `\Monolog\Handler\SlackbotHandler`
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAstrotomic%2Flaravel-monolog-config.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FAstrotomic%2Flaravel-monolog-config?ref=badge_large)
