@@ -10,7 +10,9 @@ return [
     'fallback' => 'stream',
 
     'formatters' => [
-        'line_formatter' => new LineFormatter(),
+        'line_formatter' => [
+            'class' => LineFormatter::class,
+        ],
     ],
 
     'handlers' => [
@@ -58,7 +60,12 @@ return [
 //            'enabled' => false,
 //            'driver' => 'mandrill',
 //            'api_key' => null,
-//            'message' => new Swift_Message('Laravel Log'),
+//            'message' => [
+//                'class' => Swift_Message::class,
+//                'args' => [
+//                    'Laravel Log',
+//                ],
+//            ],
 //            'level' => Logger::DEBUG,
 //        ],
 //        'mongodb' => [

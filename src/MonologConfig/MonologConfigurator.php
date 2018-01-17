@@ -2,6 +2,7 @@
 
 namespace Astrotomic\MonologConfig;
 
+use Swift_Message;
 use Predis\Client;
 use Gelf\Publisher;
 use Monolog\Logger;
@@ -79,9 +80,7 @@ class MonologConfigurator
                     $this->monolog->pushHandler($handler);
                     if (array_key_exists('formatter', $config)) {
                         $formatter = array_get($this->config['formatters'], $config['formatter']);
-                        if ($formatter instanceof FormatterInterface) {
-                            $handler->setFormatter($formatter);
-                        }
+                        $handler->setFormatter($this->getInstance($formatter, FormatterInterface::class));
                     }
                 }
 
@@ -172,7 +171,9 @@ class MonologConfigurator
      */
     protected function getMandrillHandler(array $config)
     {
-        return new MandrillHandler($config['api_key'], $config['message'], $config['level']);
+        $message = $this->getInstance($config['message'], Swift_Message::class);
+
+        return new MandrillHandler($config['api_key'], $message, $config['level']);
     }
 
     /**
@@ -320,5 +321,28 @@ class MonologConfigurator
             $config['level'],
             true
         );
+    }
+
+    /**
+     * @param array $instanceable
+     * @param string $requested
+     *
+     * @return mixed
+     * @throws \RuntimeException
+     * @since v2.0
+     */
+    protected function getInstance(array $instanceable, $requested)
+    {
+        if(array_key_exists('class', $instanceable)) {
+            $className = $instanceable['class'];
+
+            if (is_a($className, $requested)) {
+                $reflection = new \ReflectionClass($className);
+
+                return $reflection->newInstanceArgs(array_get($instanceable, 'args', []));
+            }
+        }
+
+        throw new \RuntimeException('It was not possible to create an instance.');
     }
 }
