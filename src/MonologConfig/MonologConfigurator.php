@@ -2,8 +2,8 @@
 
 namespace Astrotomic\MonologConfig;
 
-use Swift_Message;
 use Predis\Client;
+use Swift_Message;
 use Gelf\Publisher;
 use Monolog\Logger;
 use Illuminate\Support\Str;
@@ -333,7 +333,7 @@ class MonologConfigurator
      */
     protected function getInstance(array $instanceable, $requested)
     {
-        if(array_key_exists('class', $instanceable)) {
+        if (array_key_exists('class', $instanceable)) {
             $className = $instanceable['class'];
 
             if (is_a($className, $requested)) {
